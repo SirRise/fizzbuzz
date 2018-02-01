@@ -5,12 +5,9 @@ int main(void) {
     int x = 100;
     string output;
     while (x-- > 0) {
-        cout << (x%5==0)?"Fizz"+(x%3==0)?"Buzz":x;:(x%3==0)?"Buzz":x;
+        output = "";
+        if (x%5 == 0) output += "Fizz";
+        if (x%3 == 0) output += "Buzz";
+        cout << (output == "")? x : output;
     }
 }
-
-/*
-        output = (x % 5 == 0)? "Fizz":;
-        output += (x % 3 == 0)? "Buzz":;
-        cout << output;
-*/
